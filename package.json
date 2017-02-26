@@ -1,0 +1,22 @@
+{
+  "name": "noxie",
+  "version": "1.0.0",
+  "description": "Noxie Limited Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/oyewoleo/noxie-website.git"
+  },
+  "keywords": [
+    "noxie"
+  ],
+  "author": "Seun Oyewole",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/oyewoleo/noxie-website/issues"
+  },
+  "homepage": "https://gitlab.com/oyewoleo/noxie-website#README"
+}
