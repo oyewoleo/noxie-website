@@ -15,15 +15,15 @@ Comments:	'.$_POST['comments'].'
       
     // Set up SMTP  
     $mail->IsSMTP();                // Sets up a SMTP connection
-    $mail->Host = "mail.noxielmited.com";  //Gmail SMTP server address
+    $mail->Host = "n3plcpnl0054.prod.ams3.secureserver.net";  //Gmail SMTP server address
     $mail->SMTPAuth = true;         // Connection with the SMTP does require authorization    
     $mail->SMTPSecure = "ssl";      // Connect using a TLS connection
     //$mail->SMTPSecure = 'tls';
-    $mail->Port = 25;  //Gmail SMTP port
+    $mail->Port = 465;  //Gmail SMTP port
     $mail->CharSet = 'utf-8';
     
     // Authentication  
-    $mail->Username   = "noreply@noxielimited.com"; // Your full Gmail address
+    $mail->Username   = "noxie@noxielimited.com"; // Your full Gmail address
     $mail->Password   = "NoxieLimited@2017"; // Your Gmail password
       
     // Compose
@@ -37,12 +37,13 @@ Comments:	'.$_POST['comments'].'
     $result = $mail->Send();		// Send!  
 	$message = $result ? 'Successfully Sent!' : 'Sending Failed!';      
 	unset($mail);
+	
+	if(!$result){
+        echo "Error. Message did not send";
+    } else {
+        include_once("home.html");
+    }
 
 }
 
-if(!$result){
-    echo "Error. Message did not send";
-} else {
-    include_once("home.html");
-}
 ?>
