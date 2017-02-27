@@ -21,7 +21,7 @@ Comments:	'.$_POST['comments'].'
     //$mail->SMTPSecure = 'tls';
     $mail->Port = 587;  //Gmail SMTP port
     $mail->CharSet = 'utf-8';
-    
+    $mail->SetLanguage( 'en', 'phpmailer/language/' );
     
     // Authentication  
     $mail->Username   = "noreply@noxielimited.com"; // Your full Gmail address
