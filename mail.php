@@ -21,7 +21,6 @@ Comments:	'.$_POST['comments'].'
     //$mail->SMTPSecure = 'tls';
     $mail->Port = 587;  //Gmail SMTP port
     $mail->CharSet = 'utf-8';
-    $mail->SetLanguage( 'en', 'phpmailer/language/' );
     
     // Authentication  
     $mail->Username   = "noreply@noxielimited.com"; // Your full Gmail address
@@ -34,7 +33,7 @@ Comments:	'.$_POST['comments'].'
     $mail->MsgHTML($message);
  
     // Send To  
-    $mail->AddAddress("noreply@noxielimited.com", "Noxie"); // Where to send it - Recipient
+    $mail->AddAddress("noreply@noxielimited.com"); // Where to send it - Recipient
     $result = $mail->Send();		// Send!  
 	$message = $result ? 'Successfully Sent!' : 'Sending Failed!';      
 	unset($mail);
