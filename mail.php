@@ -18,10 +18,10 @@ Comments:	'.$_POST['comments'].'
     $mail->Host = "n3plcpnl0054.prod.ams3.secureserver.net";  //Gmail SMTP server address
     $mail->SMTPAuth = true;         // Connection with the SMTP does require authorization    
     $mail->SMTPSecure = "ssl";      // Connect using a TLS connection
-    $mail->SMTPSecure = 'tls';
+    //$mail->SMTPSecure = 'tls';
     $mail->Port = 465;  //Gmail SMTP port
     $mail->CharSet = 'utf-8';
-    $mail->SMTPDebug  = 0; 
+    $mail->SMTPDebug  = 1; 
     
     // Authentication  
     $mail->Username   = "noreply@noxielimited.com"; // Your full Gmail address
@@ -41,7 +41,9 @@ Comments:	'.$_POST['comments'].'
 
 }
 
-if($mail->send()){
+if(!$result){
+    echo "Error. Message did not send";
+} else {
     include_once("home.html");
 }
 ?>
