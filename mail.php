@@ -11,7 +11,7 @@ Comments:	'.$_POST['comments'].'
     require "phpmailer/class.phpmailer.php"; //include phpmailer class
       
     // Instantiate Class  
-    $mail = new PHPMailer();  
+    $mail = new PHPMailer(true);  
       
     // Set up SMTP  
     $mail->IsSMTP();                // Sets up a SMTP connection
