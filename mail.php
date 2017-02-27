@@ -19,7 +19,6 @@ Comments:	'.$_POST['comments'].'
     $mail->SMTPSecure = "ssl";      // Connect using a TLS connection  
     $mail->Host = "n3plcpnl0054.prod.ams3.secureserver.net";  //Gmail SMTP server address
     $mail->Port = 465;  //Gmail SMTP port
-    $mail->Encoding = '7bit';
     
     // Authentication  
     $mail->Username   = "noreply@noxielimited.com"; // Your full Gmail address
