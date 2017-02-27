@@ -21,9 +21,10 @@ Comments:	'.$_POST['comments'].'
     //$mail->SMTPSecure = 'tls';
     $mail->Port = 465;  //Gmail SMTP port
     $mail->CharSet = 'utf-8';
+    $mail->SMTPAutoTLS = false;
     
     // Authentication  
-    $mail->Username   = "noxie@noxielimited.com"; // Your full Gmail address
+    $mail->Username   = "noreply@noxielimited.com"; // Your full Gmail address
     $mail->Password   = "NoxieLimited@2017"; // Your Gmail password
       
     // Compose
