@@ -14,12 +14,11 @@ Comments:	'.$_POST['comments'].'
     $mail = new PHPMailer();  
       
     // Set up SMTP  
-    $mail->IsSMTP();                // Sets up a SMTP connection  
+    $mail->IsSMTP();                // Sets up a SMTP connection
+    $mail->Host = "n3plcpnl0054.prod.ams3.secureserver.net";  //Gmail SMTP server address
     $mail->SMTPAuth = true;         // Connection with the SMTP does require authorization    
     $mail->SMTPSecure = "ssl";      // Connect using a TLS connection  
-    $mail->Host = "n3plcpnl0054.prod.ams3.secureserver.net;mail.noxielimited.com";  //Gmail SMTP server address
     $mail->Port = 465;  //Gmail SMTP port
-    $mail->Encoding = '7bit';
     
     // Authentication  
     $mail->Username   = "noreply@noxielimited.com"; // Your full Gmail address
