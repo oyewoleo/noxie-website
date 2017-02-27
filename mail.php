@@ -17,7 +17,7 @@ Comments:	'.$_POST['comments'].'
     $mail->IsSMTP();                // Sets up a SMTP connection
     $mail->Host = "n3plcpnl0054.prod.ams3.secureserver.net";  //Gmail SMTP server address
     $mail->SMTPAuth = true;         // Connection with the SMTP does require authorization    
-    //$mail->SMTPSecure = "ssl";      // Connect using a TLS connection
+    $mail->SMTPSecure = "ssl";      // Connect using a TLS connection
     //$mail->SMTPSecure = 'tls';
     $mail->Port = 465;  //Gmail SMTP port
     $mail->CharSet = 'utf-8';
