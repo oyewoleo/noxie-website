@@ -21,13 +21,7 @@ Comments:	'.$_POST['comments'].'
     //$mail->SMTPSecure = 'tls';
     $mail->Port = 465;  //Gmail SMTP port
     $mail->CharSet = 'utf-8';
-    $mail->SMTPOptions = array(
-    'ssl' => array(
-        'verify_peer' => false,
-        'verify_peer_name' => false,
-        'allow_self_signed' => true
-        )
-    );
+    
     
     // Authentication  
     $mail->Username   = "noreply@noxielimited.com"; // Your full Gmail address
@@ -45,7 +39,7 @@ Comments:	'.$_POST['comments'].'
 	$message = $result ? 'Successfully Sent!' : 'Sending Failed!';      
 	unset($mail);
 	
-	if(!$result){
+	if(!$mail->send()){
         echo "Error. Message did not send";
     } else {
         include_once("home.html");
