@@ -11,15 +11,15 @@ Comments:	'.$_POST['comments'].'
     require "phpmailer/class.phpmailer.php"; //include phpmailer class
       
     // Instantiate Class  
-    $mail = new PHPMailer(true);  
+    $mail = new PHPMailer();  
       
     // Set up SMTP  
     $mail->IsSMTP();                // Sets up a SMTP connection
     $mail->Host = "n3plcpnl0054.prod.ams3.secureserver.net";  //Gmail SMTP server address
     $mail->SMTPAuth = true;         // Connection with the SMTP does require authorization    
-    $mail->SMTPSecure = "ssl";      // Connect using a TLS connection
+    $mail->SMTPSecure = "tls";      // Connect using a TLS connection
     //$mail->SMTPSecure = 'tls';
-    $mail->Port = 465;  //Gmail SMTP port
+    $mail->Port = 587;  //Gmail SMTP port
     $mail->CharSet = 'utf-8';
     
     
