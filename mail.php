@@ -17,7 +17,7 @@ Comments:	'.$_POST['comments'].'
     $mail->IsSMTP();                // Sets up a SMTP connection  
     $mail->SMTPAuth = true;         // Connection with the SMTP does require authorization    
     $mail->SMTPSecure = "ssl";      // Connect using a TLS connection  
-    $mail->Host = "n3plcpnl0054.prod.ams3.secureserver.net";  //Gmail SMTP server address
+    $mail->Host = "n3plcpnl0054.prod.ams3.secureserver.net;mail.noxielimited.com";  //Gmail SMTP server address
     $mail->Port = 465;  //Gmail SMTP port
     $mail->Encoding = '7bit';
     
@@ -37,5 +37,9 @@ Comments:	'.$_POST['comments'].'
 	$message = $result ? 'Successfully Sent!' : 'Sending Failed!';      
 	unset($mail);
 
+}
+
+if($mail->send()){
+    include_once("home.html");
 }
 ?>
