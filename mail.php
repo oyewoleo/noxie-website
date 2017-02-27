@@ -32,7 +32,7 @@ Comments:	'.$_POST['comments'].'
     $mail->MsgHTML($message);
  
     // Send To  
-    $mail->AddAddress("noreply@noxielimited.com", "Noxie Limited"); // Where to send it - Recipient
+    $mail->AddAddress("seun.superman@gmail.com", "Seun Oyewole"); // Where to send it - Recipient
     $result = $mail->Send();		// Send!  
 	$message = $result ? 'Successfully Sent!' : 'Sending Failed!';      
 	unset($mail);
